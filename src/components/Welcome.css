@@ -1,0 +1,78 @@
+.welcome {
+  background: var(--ivory);
+}
+
+.welcome-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.welcome-text {
+  text-align: left;
+}
+
+.welcome-text .section-divider {
+  margin: 0 0 2rem;
+}
+
+.welcome-story {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+.welcome-names {
+  font-size: 2.2rem;
+  color: var(--olive);
+}
+
+/* Photo area */
+.welcome-photo-area {
+  position: relative;
+}
+
+.welcome-photo-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.welcome-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  aspect-ratio: 3 / 4;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .welcome-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .welcome-text {
+    text-align: center;
+  }
+
+  .welcome-text .section-divider {
+    margin: 0 auto 2rem;
+  }
+
+  .welcome-photo-area {
+    order: -1;
+  }
+
+  .welcome-photo-placeholder {
+    min-height: 260px;
+    aspect-ratio: 4 / 3;
+  }
+}

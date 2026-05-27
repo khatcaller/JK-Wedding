@@ -1,0 +1,164 @@
+/* ── Design Tokens ── */
+:root {
+  --olive:       #6e7c4a;
+  --olive-light: #8a9a60;
+  --olive-dark:  #505b35;
+  --rust:        #b85c38;
+  --rust-light:  #cc7050;
+  --ivory:       #faf7f2;
+  --cream:       #f4efe6;
+  --beige:       #ede5d8;
+  --taupe:       #c4b5a0;
+  --warm-gray:   #9a8f82;
+  --text-dark:   #3a3228;
+  --text-mid:    #5c5248;
+  --text-light:  #8a7e74;
+
+  --font-serif:  'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-body:   'Inter', system-ui, sans-serif;
+
+  --section-pad: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+  --max-width:   900px;
+  --radius:      6px;
+
+  --shadow-soft: 0 4px 24px rgba(58, 50, 40, 0.08);
+  --shadow-card: 0 2px 12px rgba(58, 50, 40, 0.1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  /* account for fixed nav so anchor links land correctly */
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--text-dark);
+  background: var(--ivory);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* ── Typography helpers ── */
+.script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+/* ── Shared section styles ── */
+.section {
+  padding: var(--section-pad);
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.section-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--taupe);
+  margin: 0 auto 2.5rem;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--olive);
+  color: var(--ivory);
+  border: 1.5px solid var(--olive);
+}
+
+.btn-primary:hover {
+  background: var(--olive-dark);
+  border-color: var(--olive-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ivory);
+  border: 1.5px solid rgba(250, 247, 242, 0.6);
+}
+
+.btn-outline:hover {
+  background: rgba(250, 247, 242, 0.12);
+  border-color: var(--ivory);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1.5px solid var(--taupe);
+}
+
+.btn-outline-dark:hover {
+  background: var(--olive-dark);
+  border-color: var(--olive-dark);
+  color: var(--ivory);
+}
+

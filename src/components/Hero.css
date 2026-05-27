@@ -1,0 +1,171 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 4rem;
+  background:
+    /* subtle texture */
+    radial-gradient(ellipse at 20% 50%, rgba(110, 124, 74, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(184, 92, 56, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 60% 90%, rgba(110, 124, 74, 0.1) 0%, transparent 50%),
+    linear-gradient(160deg, #3a3a28 0%, #2e2a1e 40%, #1e1a12 100%);
+  overflow: hidden;
+}
+
+/* Botanical circle accents — use vw so they scale on all screens */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: min(500px, 90vw);
+  height: min(500px, 90vw);
+  border-radius: 50%;
+  border: 1px solid rgba(110, 124, 74, 0.15);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: min(700px, 130vw);
+  height: min(700px, 130vw);
+  border-radius: 50%;
+  border: 1px solid rgba(110, 124, 74, 0.08);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(30, 26, 18, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.hero-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 120px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-ornament-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(196, 181, 160, 0.35);
+}
+
+.hero-ornament-leaf {
+  font-size: 0.9rem;
+  color: rgba(196, 181, 160, 0.5);
+  line-height: 1;
+}
+
+.hero-names {
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  color: var(--ivory);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  width: 200px;
+}
+
+.hero-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(196, 181, 160, 0.4);
+}
+
+.hero-divider-leaf {
+  color: var(--taupe);
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.hero-date {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: 300;
+  color: rgba(250, 247, 242, 0.75);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.hero-venue {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(250, 247, 242, 0.78);
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-scroll-line {
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, rgba(196, 181, 160, 0.5));
+  margin: 0 auto;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+@media (max-width: 480px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+}

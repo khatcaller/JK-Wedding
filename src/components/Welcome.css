@@ -2,39 +2,15 @@
   background: var(--ivory);
 }
 
+/* Mobile-first: single column, photo on top */
 .welcome-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-.welcome-text {
-  text-align: left;
-}
-
-.welcome-text .section-divider {
-  margin: 0 0 2rem;
-}
-
-.welcome-story {
-  font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--text-mid);
-  line-height: 1.85;
-  margin-bottom: 2rem;
-}
-
-.welcome-names {
-  font-size: 2.2rem;
-  color: var(--olive);
-}
-
-/* Photo area */
 .welcome-photo-area {
-  position: relative;
+  width: 100%;
 }
 
 .welcome-photo-frame {
@@ -43,36 +19,65 @@
   box-shadow: var(--shadow-soft);
 }
 
+/* Landscape crop on mobile — doesn't dominate the screen */
 .welcome-photo-img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center top;
-  aspect-ratio: 3 / 4;
   display: block;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
+.welcome-text {
+  text-align: center;
+}
+
+.welcome-text .section-divider {
+  margin: 0 auto 1.75rem;
+}
+
+.welcome-story {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 1.75rem;
+}
+
+.welcome-names {
+  font-size: 2rem;
+  color: var(--olive);
+}
+
+/* Tablet+: side-by-side, portrait photo */
+@media (min-width: 700px) {
   .welcome-inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .welcome-text {
-    text-align: center;
-  }
-
-  .welcome-text .section-divider {
-    margin: 0 auto 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
   }
 
   .welcome-photo-area {
-    order: -1;
+    order: 2;
   }
 
-  .welcome-photo-placeholder {
-    min-height: 260px;
-    aspect-ratio: 4 / 3;
+  .welcome-photo-img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .welcome-text {
+    order: 1;
+    text-align: left;
+  }
+
+  .welcome-text .section-divider {
+    margin: 0 0 2rem;
+  }
+
+  .welcome-names {
+    font-size: 2.4rem;
   }
 }

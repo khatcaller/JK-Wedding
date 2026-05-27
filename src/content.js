@@ -6,9 +6,10 @@
 export const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzSGT7d_Yl_gz7-Y3t5rUHEWpbekPAoG433ThQbVvvSD6rqKTWCUiwoKDN_oNxiOD_fDg/exec';
 
 export const couple = {
-  name1: 'Karina',
-  name2: 'Jonathan',
-  combined: 'Karina & Jonathan',
+  name1: 'Jonathan',
+  name2: 'Karina',
+  combined: 'Jonathan\u00A0&\u00A0Karina',
+  initials: 'J\u2009&\u2009K',
 };
 
 export const event = {

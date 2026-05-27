@@ -18,12 +18,28 @@
   --font-script: 'Great Vibes', cursive;
   --font-body:   'Inter', system-ui, sans-serif;
 
-  --section-pad: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+  /* mobile-first: comfortable base, scales up */
+  --section-v:   4.5rem;
+  --section-h:   1.5rem;
   --max-width:   900px;
   --radius:      6px;
 
   --shadow-soft: 0 4px 24px rgba(58, 50, 40, 0.08);
   --shadow-card: 0 2px 12px rgba(58, 50, 40, 0.1);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --section-v: 5rem;
+    --section-h: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --section-v: 7rem;
+    --section-h: 3rem;
+  }
 }
 
 /* ── Reset ── */
@@ -36,8 +52,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  /* account for fixed nav so anchor links land correctly */
-  scroll-padding-top: 70px;
+  scroll-padding-top: 64px;
 }
 
 body {
@@ -78,7 +93,7 @@ button {
 
 /* ── Shared section styles ── */
 .section {
-  padding: var(--section-pad);
+  padding: var(--section-v) var(--section-h);
 }
 
 .section-inner {
@@ -98,26 +113,27 @@ button {
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 5vw, 3rem);
   font-weight: 300;
   color: var(--text-dark);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .section-divider {
   width: 48px;
   height: 1px;
   background: var(--taupe);
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 2rem;
 }
 
-/* ── Buttons ── */
+/* ── Buttons — mobile-first: full width, scale to auto ── */
 .btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 2rem;
+  width: 100%;
+  padding: 0.9rem 2rem;
   border-radius: var(--radius);
   font-family: var(--font-body);
   font-size: 0.8rem;
@@ -126,6 +142,15 @@ button {
   text-transform: uppercase;
   transition: all 0.2s ease;
   white-space: nowrap;
+  /* minimum 44px tap target */
+  min-height: 44px;
+}
+
+@media (min-width: 480px) {
+  .btn {
+    display: inline-flex;
+    width: auto;
+  }
 }
 
 .btn-primary {
@@ -161,4 +186,3 @@ button {
   border-color: var(--olive-dark);
   color: var(--ivory);
 }
-

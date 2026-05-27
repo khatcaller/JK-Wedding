@@ -1,11 +1,11 @@
 .footer {
   background: linear-gradient(160deg, #3a3a28 0%, #2e2a1e 60%, #1e1a12 100%);
-  padding: 4rem 1.5rem 3rem;
+  padding: 4.5rem 1.25rem 3.5rem;
   text-align: center;
 }
 
 .footer-inner {
-  max-width: 560px;
+  max-width: 540px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
   align-items: center;
   gap: 0.75rem;
   width: 160px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .footer-divider-line {
@@ -27,29 +27,24 @@
   background: rgba(196, 181, 160, 0.35);
 }
 
-.footer-divider-leaf {
-  color: var(--taupe);
-  font-size: 1rem;
-  opacity: 0.6;
-}
-
 .footer-tagline {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 300;
   font-style: italic;
   color: rgba(250, 247, 242, 0.65);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .footer-names {
-  font-size: 2.8rem;
+  font-size: clamp(1.9rem, 7vw, 2.8rem);
   color: var(--ivory);
   opacity: 0.9;
+  line-height: 1.15;
 }
 
 .footer-date {
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -58,9 +53,9 @@
 
 .footer-venue {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 300;
   font-style: italic;
   color: rgba(196, 181, 160, 0.4);
-  margin-top: 0.25rem;
+  margin-top: 0.15rem;
 }

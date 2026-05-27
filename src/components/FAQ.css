@@ -4,11 +4,11 @@
 
 .faq-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .faq-list {
-  max-width: 640px;
+  max-width: 620px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -23,13 +23,15 @@
   border-top: 1px solid var(--beige);
 }
 
+/* Tap target: minimum 48px tall via padding */
 .faq-question {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.25rem 0;
+  padding: 1.1rem 0;
+  min-height: 52px;
   background: none;
   font-family: var(--font-serif);
   font-size: 1.05rem;
@@ -49,12 +51,11 @@
 
 .faq-icon {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
-/* CSS-drawn plus/minus using pseudo-elements */
 .faq-icon::before,
 .faq-icon::after {
   content: '';
@@ -65,7 +66,6 @@
 }
 
 .faq-icon::before {
-  /* horizontal bar */
   width: 14px;
   height: 1.5px;
   top: 50%;
@@ -74,7 +74,6 @@
 }
 
 .faq-icon::after {
-  /* vertical bar — becomes invisible when open */
   width: 1.5px;
   height: 14px;
   top: 50%;
@@ -92,7 +91,7 @@
   opacity: 0;
 }
 
-/* Smooth expand/collapse via max-height */
+/* Smooth expand/collapse */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -100,13 +99,13 @@
 }
 
 .faq-answer--open {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .faq-answer p {
   font-size: 0.95rem;
   color: var(--text-mid);
-  line-height: 1.75;
+  line-height: 1.8;
   font-weight: 300;
   padding-bottom: 1.25rem;
 }

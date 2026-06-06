@@ -3,16 +3,22 @@
   --olive:       #6e7c4a;
   --olive-light: #8a9a60;
   --olive-dark:  #505b35;
+  --olive-deep:  #1d2712;
   --rust:        #b85c38;
   --rust-light:  #cc7050;
   --ivory:       #faf7f2;
   --cream:       #f4efe6;
   --beige:       #ede5d8;
   --taupe:       #c4b5a0;
-  --warm-gray:   #9a8f82;
+  /* #6e6458 passes AA (5.0:1) on --ivory; was #9a8f82 (2.8:1) */
+  --warm-gray:   #6e6458;
   --text-dark:   #3a3228;
   --text-mid:    #5c5248;
-  --text-light:  #8a7e74;
+  /* #6b6157 passes AA (4.6:1) on --ivory; was #8a7e74 (3.5:1) */
+  --text-light:  #6b6157;
+
+  /* Used to keep scroll-padding-top in sync with the fixed nav */
+  --nav-height:  64px;
 
   --font-serif:  'Cormorant Garamond', Georgia, serif;
   --font-script: 'Great Vibes', cursive;
@@ -52,7 +58,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  scroll-padding-top: 64px;
+  /* Stays in sync with --nav-height + any iOS notch height */
+  scroll-padding-top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
 }
 
 body {
@@ -91,6 +98,16 @@ button {
   font-family: var(--font-serif);
 }
 
+/* ── Keyboard focus — visible ring for all interactive elements ── */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* ── Shared section styles ── */
 .section {
   padding: var(--section-v) var(--section-h);
@@ -103,11 +120,12 @@ button {
 
 .section-label {
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--olive);
+  /* --olive-dark (#505b35) passes AA (6.6:1) at this size; --olive (#6e7c4a) only 4.2:1 */
+  color: var(--olive-dark);
   margin-bottom: 0.75rem;
 }
 

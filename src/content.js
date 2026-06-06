@@ -43,17 +43,17 @@ export const story = {
 };
 
 export const schedule = [
-  { time: '2:30 PM', label: 'Guest Arrival' },
-  { time: '3:00 PM', label: 'Ceremony', highlight: true },
-  { time: '3:30 PM', label: 'Cocktail Hour' },
-  { time: '4:00 PM', label: 'Reception Seating' },
-  { time: '4:10 PM', label: 'Grand Entrance', highlight: true },
-  { time: '4:20 PM', label: 'Welcome' },
-  { time: '4:30 PM', label: 'Dinner' },
-  { time: '5:30 PM', label: 'Toasts' },
-  { time: '5:45 PM', label: 'Cake' },
-  { time: '6:00 PM', label: 'First Dances', highlight: true },
-  { time: '6:35 PM', label: 'Open Dancing', highlight: true },
+  { time: '3:00 PM', label: 'Guest Arrival' },
+  { time: '3:30 PM', label: 'Ceremony', highlight: true },
+  { time: '4:00 PM', label: 'Cocktail Hour' },
+  { time: '4:30 PM', label: 'Reception Seating' },
+  { time: '4:40 PM', label: 'Grand Entrance', highlight: true },
+  { time: '4:50 PM', label: 'Welcome' },
+  { time: '5:00 PM', label: 'Dinner' },
+  { time: '6:00 PM', label: 'Toasts' },
+  { time: '6:15 PM', label: 'Cake' },
+  { time: '6:30 PM', label: 'First Dances', highlight: true },
+  { time: '7:00 PM', label: 'Open Dancing', highlight: true },
   { time: '9:30 PM', label: 'Last Call' },
   { time: '9:45 PM', label: 'Send-Off Lineup' },
   { time: '10:00 PM', label: 'Exit' },
@@ -101,11 +101,11 @@ export const faqs = [
   },
   {
     q: 'What time should I arrive?',
-    a: 'Guests are welcome to arrive starting at 2:30 PM. The ceremony begins promptly at 3:00 PM, so please plan to be seated before then.',
+    a: 'Guests are welcome to arrive starting at 3:00 PM. The ceremony begins promptly at 3:30 PM, so please plan to be seated before then.',
   },
   {
     q: 'Will there be parking?',
-    a: 'Yes, parking will be available on-site at The Fly Farm. More specific parking details will be provided closer to the date.',
+    a: 'Yes, parking will be available on-site at The Fly Farm.',
   },
 ];
 

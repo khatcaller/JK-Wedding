@@ -50,7 +50,7 @@ export default function Schedule() {
 
               <div className="invite-details">
                 <p className="invite-detail-line serif">Saturday, September 5, 2026</p>
-                <p className="invite-detail-line invite-detail-time serif">3:00 PM – 10:00 PM</p>
+                <p className="invite-detail-line invite-detail-time serif">3:30 PM – 10:00 PM</p>
               </div>
 
               <div className="invite-rule" aria-hidden="true">

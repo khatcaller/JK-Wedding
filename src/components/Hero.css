@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  min-height: 100svh;
-  background-color: #1e1a12;
+  height: 100svh;
+  background-color: var(--olive-deep);
   overflow: hidden;
 }
 
@@ -10,4 +10,39 @@
   inset: 0;
   background-size: cover;
   background-position: center 38%;
+}
+
+/* Scroll cue — centered chevron at the bottom of the hero */
+.hero-scroll {
+  position: absolute;
+  bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.hero-chevron {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid rgba(250, 247, 242, 0.7);
+  border-bottom: 2px solid rgba(250, 247, 242, 0.7);
+  transform: rotate(45deg);
+  animation: hero-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes hero-bounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50%       { transform: rotate(45deg) translateY(5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-chevron {
+    animation: none;
+  }
 }

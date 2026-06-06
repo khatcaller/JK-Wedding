@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(160deg, #3a3a28 0%, #2e2a1e 60%, #1e1a12 100%);
-  padding: 4.5rem 1.25rem 3.5rem;
+  background: linear-gradient(160deg, #2d3a1c 0%, #222d14 60%, var(--olive-deep) 100%);
+  padding: 4.5rem 1.25rem calc(3.5rem + env(safe-area-inset-bottom, 0px));
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
 
 .footer-date {
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -42,6 +42,7 @@
   font-size: 0.88rem;
   font-weight: 300;
   font-style: italic;
-  color: rgba(196, 181, 160, 0.4);
+  /* #c4b5a0 solid passes AA (7:1) on the dark footer background; was 0.4 opacity (~1.5:1) */
+  color: #c4b5a0;
   margin-top: 0.15rem;
 }

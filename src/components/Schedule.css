@@ -24,7 +24,7 @@
 
 .schedule-day-date {
   font-family: var(--font-body);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -44,11 +44,10 @@
   gap: 0.4rem;
 }
 
-/* ── Private card ── */
+/* ── Private card — dashed border signals "invite-only" without dimming the text ── */
 .event-card--private {
   background: var(--ivory);
-  border-left-color: var(--warm-gray);
-  opacity: 0.85;
+  border-left: 2px dashed var(--warm-gray);
 }
 
 .event-card-badge--private {
@@ -105,12 +104,12 @@
 
 /* ── Wedding invitation card ── */
 .event-card--wedding {
-  background: #212d18;
+  background: var(--olive-deep);
   border: 1px solid rgba(201, 168, 76, 0.25);
   border-left: 1px solid rgba(201, 168, 76, 0.25);
   padding: 0;
   box-shadow:
-    0 0 0 4px #212d18,
+    0 0 0 4px var(--olive-deep),
     0 0 0 5px rgba(201, 168, 76, 0.3),
     0 12px 40px rgba(20, 28, 14, 0.5);
 }

@@ -7,7 +7,6 @@ export default function Welcome() {
       <div className="section-inner welcome-inner">
         <div className="welcome-text">
           <p className="section-label">A Note From Us</p>
-          <h2 className="section-title">A love worth celebrating</h2>
           <p className="welcome-story">{story.text}</p>
           <p className="welcome-names script">{couple.combined}</p>
         </div>
@@ -18,6 +17,7 @@ export default function Welcome() {
               src={images.couplePhoto}
               alt={images.couplePhotoAlt}
               className="welcome-photo-img"
+              loading="lazy"
             />
           </div>
         </div>

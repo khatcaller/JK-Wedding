@@ -18,18 +18,8 @@
 }
 
 .schedule-day-label {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
   margin-bottom: 1.25rem;
-}
-
-.schedule-day-label::before,
-.schedule-day-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--beige);
+  text-align: center;
 }
 
 .schedule-day-date {
@@ -138,25 +128,25 @@
   gap: 0;
 }
 
-/* Script heading — smaller on mobile, scales up */
 .invite-names {
   font-size: clamp(1.5rem, 7vw, 2.2rem);
   color: #e8d48a;
   line-height: 1;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 0 30px rgba(232, 212, 138, 0.25);
+  margin-bottom: 0.35rem;
 }
 
-/* Ornamental rule */
 .invite-rule {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
   width: 100%;
-  margin: 0.6rem 0;
+  margin: 0.45rem 0;
 }
 
-.invite-rule span:not(.invite-rule-leaf) {
+.invite-rule--ornament {
+  gap: 0.6rem;
+}
+
+.invite-rule-line {
   flex: 1;
   height: 1px;
   background: rgba(201, 168, 76, 0.2);
@@ -166,6 +156,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  margin: 0.15rem 0;
 }
 
 .invite-detail-line {
@@ -177,28 +168,27 @@
 
 .invite-detail-time {
   font-style: italic;
-  font-size: clamp(1.05rem, 3.5vw, 1.35rem);
-  color: #c9a84c;
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  color: rgba(232, 212, 138, 0.9);
 }
 
 .invite-venue {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 3vw, 1.15rem);
   font-weight: 500;
-  color: rgba(232, 212, 138, 0.75);
-  letter-spacing: 0.05em;
-  margin-bottom: 0.15rem;
+  color: rgba(232, 212, 138, 0.92);
+  letter-spacing: 0.04em;
+  margin: 0.15rem 0 0.2rem;
 }
 
 .invite-address {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: clamp(0.82rem, 2.5vw, 0.92rem);
   font-weight: 300;
-  color: rgba(201, 168, 76, 0.65);
-  letter-spacing: 0.02em;
+  color: rgba(232, 212, 138, 0.78);
+  letter-spacing: 0.06em;
+  line-height: 1.5;
 }
 
-/* Wedding highlights list */
+/* Wedding highlights timeline */
 .event-highlights {
   list-style: none;
   margin-top: 0.6rem;
@@ -210,23 +200,22 @@
   width: 100%;
 }
 
-.event-card--wedding .event-highlights {
+.event-highlights--invite {
   border-top: none;
-  margin-top: 0;
+  margin: 0.15rem auto 0;
   padding-top: 0;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.45rem;
 }
 
-.event-highlight-item {
-  display: flex;
+.event-highlight-row {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  column-gap: 0.65rem;
   align-items: center;
-  gap: 0.6rem;
 }
 
-.event-card--wedding .event-highlight-item {
-  justify-content: center;
-}
-
-/* Time column */
 .event-highlight-time {
   font-family: var(--font-serif);
   font-size: 0.85rem;
@@ -237,9 +226,20 @@
   flex-shrink: 0;
 }
 
-.event-card--wedding .event-highlight-time {
+.event-highlights--invite .event-highlight-time {
   color: #c9a84c;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  min-width: 4.75rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.event-highlight-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  flex-shrink: 0;
 }
 
 .event-highlight-dot {
@@ -250,10 +250,6 @@
   flex-shrink: 0;
 }
 
-.event-card--wedding .event-highlight-dot {
-  background: rgba(201, 168, 76, 0.35);
-}
-
 .event-highlight-label {
   font-family: var(--font-serif);
   font-size: 0.95rem;
@@ -261,10 +257,16 @@
   color: var(--text-dark);
 }
 
-.event-card--wedding .event-highlight-label {
-  color: rgba(232, 212, 138, 0.85);
-  font-size: 1rem;
+.event-highlights--invite .event-highlight-label {
+  color: rgba(232, 212, 138, 0.88);
+  font-size: 0.95rem;
   text-align: left;
+}
+
+.event-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 /* Tablet+: more generous padding */
@@ -276,5 +278,13 @@
   .invite-inner {
     margin: 10px;
     padding: 2rem 1.75rem;
+  }
+
+  .event-highlights--invite {
+    column-gap: 0.75rem;
+  }
+
+  .event-highlights--invite .event-highlight-time {
+    min-width: 5.25rem;
   }
 }

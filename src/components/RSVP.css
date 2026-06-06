@@ -100,7 +100,7 @@
   font-weight: 300;
 }
 
-/* Radio group — stacked by default on mobile */
+/* Radio group - stacked by default on mobile */
 .field--radio {
   border: none;
 }
@@ -155,7 +155,7 @@
   line-height: 1.5;
 }
 
-/* Submit — full width on mobile */
+/* Submit - full width on mobile */
 .rsvp-submit {
   margin-top: 0.5rem;
   width: 100%;

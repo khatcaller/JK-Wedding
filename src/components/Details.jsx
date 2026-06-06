@@ -8,7 +8,6 @@ export default function Details() {
         <div className="details-header">
           <p className="section-label">The Day</p>
           <h2 className="section-title">Plan Your Visit</h2>
-          <div className="section-divider" />
         </div>
 
         <dl className="details-list">

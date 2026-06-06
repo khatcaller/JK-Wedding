@@ -8,7 +8,6 @@ export default function Registry() {
         <div className="registry-header">
           <p className="section-label">Gifts</p>
           <h2 className="section-title">Registry</h2>
-          <div className="section-divider" />
           <p className="registry-blurb serif">
             Having you there is everything. If you'd like to bring a gift, we've set up a few places to browse.
           </p>

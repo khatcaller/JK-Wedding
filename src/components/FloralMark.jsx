@@ -1,7 +1,7 @@
 import { useId } from 'react';
 
 /**
- * Seed of Life geometric ornament — used as a decorative divider accent.
+ * Seed of Life geometric ornament - used as a decorative divider accent.
  * Rendered as pure SVG so it scales crisply at any size.
  */
 export default function FloralMark({ size = 18, color = 'currentColor', className = '' }) {

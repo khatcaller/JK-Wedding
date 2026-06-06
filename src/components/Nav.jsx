@@ -38,7 +38,7 @@ export default function Nav() {
           <span className={`hamburger-line${menuOpen ? ' open' : ''}`} />
         </button>
 
-        {/* Backdrop — click outside drawer to close */}
+        {/* Backdrop - click outside drawer to close */}
         {menuOpen && (
           <div
             className="nav-backdrop"

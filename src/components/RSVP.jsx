@@ -78,10 +78,8 @@ export default function RSVP() {
             <div className="rsvp-header">
               <p className="section-label">Join Us</p>
               <h2 className="section-title">RSVP</h2>
-              <div className="section-divider" />
               <p className="rsvp-note serif">
-                Please only include guests listed on your invitation.
-                Kindly respond by <strong>August 1, 2026</strong>.
+                Kindly RSVP by <strong>August 1, 2026</strong> so we can save your seat and celebrate with you.
               </p>
             </div>
 
@@ -142,7 +140,7 @@ export default function RSVP() {
                         <option key={n} value={String(n)}>{n}</option>
                       ))}
                     </select>
-                    <p className="field-hint">Include only guests listed on your invitation.</p>
+                    <p className="field-hint">Include yourself and any guests attending with you.</p>
                   </div>
 
                   <div className="field">
@@ -159,7 +157,7 @@ export default function RSVP() {
                       onChange={handleChange}
                       autoComplete="off"
                     />
-                    <p className="field-hint">Only if a plus one is listed on your invitation.</p>
+                    <p className="field-hint">Please include your guest&rsquo;s full name.</p>
                   </div>
 
                   <div className="field">
@@ -179,17 +177,18 @@ export default function RSVP() {
 
                   <div className="field">
                     <label htmlFor="songRequest" className="field-label">
-                      Song request <span className="field-optional">(optional)</span>
+                      Song recommendation <span className="field-optional">(optional)</span>
                     </label>
                     <input
                       id="songRequest"
                       name="songRequest"
                       type="text"
                       className="field-input"
-                      placeholder="What will get you on the dance floor?"
+                      placeholder="Artist and song. What should we play?"
                       value={form.songRequest}
                       onChange={handleChange}
                     />
+                    <p className="field-hint">Help us build the dance floor playlist.</p>
                   </div>
                 </>
               )}

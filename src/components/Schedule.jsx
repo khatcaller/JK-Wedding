@@ -1,4 +1,4 @@
-import { schedule, rehearsalDinner, event } from '../content';
+import { schedule, event } from '../content';
 import FloralMark from './FloralMark';
 import './Schedule.css';
 
@@ -11,7 +11,6 @@ export default function Schedule() {
         <div className="schedule-header">
           <p className="section-label">Wedding Weekend</p>
           <h2 className="section-title">Schedule of Events</h2>
-          <div className="section-divider" />
         </div>
 
         {/* ── Friday: Rehearsal Dinner ── */}
@@ -43,10 +42,10 @@ export default function Schedule() {
             <div className="invite-inner">
               <p className="invite-names script">Our Wedding Day</p>
 
-              <div className="invite-rule" aria-hidden="true">
-                <span />
+              <div className="invite-rule invite-rule--ornament" aria-hidden="true">
+                <span className="invite-rule-line" />
                 <FloralMark size={26} color="rgba(201, 168, 76, 0.55)" />
-                <span />
+                <span className="invite-rule-line" />
               </div>
 
               <div className="invite-details">
@@ -55,22 +54,24 @@ export default function Schedule() {
               </div>
 
               <div className="invite-rule" aria-hidden="true">
-                <span /><span />
+                <span className="invite-rule-line" />
               </div>
 
-              <p className="invite-venue">{event.venue}</p>
-              <p className="invite-address">{event.address}</p>
+              <p className="invite-venue serif">{event.venue}</p>
+              <p className="invite-address serif">{event.address}</p>
 
               <div className="invite-rule" aria-hidden="true">
-                <span /><span />
+                <span className="invite-rule-line" />
               </div>
 
-              <ul className="event-highlights" aria-label="Key moments">
+              <ul className="event-highlights event-highlights--invite" aria-label="Key moments">
                 {highlights.map(({ time, label }) => (
-                  <li key={label} className="event-highlight-item">
+                  <li key={label} className="event-highlight-row">
                     <span className="event-highlight-time serif">{time}</span>
-                    <span className="event-highlight-dot" aria-hidden="true" />
-                    <span className="event-highlight-label">{label}</span>
+                    <span className="event-highlight-bullet" aria-hidden="true">
+                      <FloralMark size={11} color="rgba(201, 168, 76, 0.55)" />
+                    </span>
+                    <span className="event-highlight-label serif">{label}</span>
                   </li>
                 ))}
               </ul>

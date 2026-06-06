@@ -120,14 +120,7 @@ button {
   margin-bottom: 1.25rem;
 }
 
-.section-divider {
-  width: 48px;
-  height: 1px;
-  background: var(--taupe);
-  margin: 0 auto 2rem;
-}
-
-/* ── Buttons — mobile-first: full width, scale to auto ── */
+/* Buttons - mobile-first: full width, scale to auto */
 .btn {
   display: flex;
   align-items: center;

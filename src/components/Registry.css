@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-/* Buttons — stacked on mobile, wrap on larger screens */
+/* Buttons - stacked on mobile, wrap on larger screens */
 .registry-buttons {
   display: flex;
   flex-direction: column;

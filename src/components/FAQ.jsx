@@ -15,7 +15,6 @@ export default function FAQ() {
         <div className="faq-header">
           <p className="section-label">Questions</p>
           <h2 className="section-title">Good to Know</h2>
-          <div className="section-divider" />
         </div>
 
         <dl className="faq-list">

@@ -1,9 +1,16 @@
 // ─────────────────────────────────────────────
-//  Wedding content — edit this file freely
+//  Wedding content - edit this file freely
 // ─────────────────────────────────────────────
 
 // Paste your Google Apps Script web app URL here after setup:
 export const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzSGT7d_Yl_gz7-Y3t5rUHEWpbekPAoG433ThQbVvvSD6rqKTWCUiwoKDN_oNxiOD_fDg/exec';
+
+// Drop your image files in /public and update the paths below.
+export const images = {
+  heroBackground: '/couple-hero.jpg',
+  couplePhoto: '/couple-story.jpg',
+  couplePhotoAlt: 'Karina and Jonathan',
+};
 
 export const couple = {
   name1: 'Jonathan',
@@ -32,8 +39,7 @@ export const rehearsalDinner = {
 };
 
 export const story = {
-  // Replace this placeholder with your own words before launch
-  text: `Some stories begin quietly, with a shared laugh, a lingering conversation, a moment neither of you expected to matter. Ours was like that. What started as something ordinary became something we couldn't imagine living without. We've spent years building a life together, learning each other, choosing each other. And on September 5th, we get to do it in front of everyone we love. We're so glad you're part of this.`,
+  text: `Thank you for being part of our lives and for celebrating with us. We are so grateful to share this day with the people we love most.`,
 };
 
 export const schedule = [
@@ -64,7 +70,7 @@ export const details = [
   },
   {
     label: 'Dress Code',
-    value: 'Semi-Formal. Tuxes, gowns, suits, and cocktail dresses are all welcome.',
+    value: 'Semi-formal. Suits, cocktail dresses, dressy separates, tuxes, and gowns are all welcome.',
   },
   {
     label: 'Children',
@@ -72,14 +78,14 @@ export const details = [
   },
   {
     label: 'Plus Ones',
-    value: 'Included only if your invitation lists a plus one.',
+    value: 'Plus ones are welcome. Please include your guest\u2019s name when you RSVP.',
   },
 ];
 
 export const faqs = [
   {
     q: 'What should I wear?',
-    a: 'The dress code is semi-formal. Tuxes and gowns are welcome, and so are suits and cocktail dresses. The ceremony and reception are held outdoors and on grass, so keep that in mind when choosing footwear.',
+    a: 'The dress code is semi-formal. Suits, cocktail dresses, dressy separates, tuxes, and gowns are all welcome. The ceremony and reception will be held outdoors and on grass, so please keep that in mind when choosing shoes.',
   },
   {
     q: 'Are kids invited?',
@@ -87,7 +93,7 @@ export const faqs = [
   },
   {
     q: 'Can I bring a plus one?',
-    a: 'Plus ones are included only if they are listed on your invitation. If you have questions about your specific invitation, feel free to reach out to us directly.',
+    a: 'Yes, plus ones are welcome. Please note your guest\u2019s name in your RSVP so we can plan accordingly.',
   },
   {
     q: 'Where is the wedding?',
@@ -108,7 +114,7 @@ export const registry = [
 ];
 
 export const nav = [
-  { label: 'Our Story', href: '#welcome' },
+  { label: 'A Note From Us', href: '#welcome' },
   { label: 'Details', href: '#details' },
   { label: 'Schedule', href: '#schedule' },
   { label: 'RSVP', href: '#rsvp' },
